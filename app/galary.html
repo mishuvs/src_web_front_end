@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>SRC Galary</title>
+	<!-- Bootstrap Core CSS    -->
+    <script src="https://use.fontawesome.com/24df17425d.js"></script>
+    <!-- build:css styles/main.css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/animate.css" rel="stylesheet" />
+    <link href="css/style2.css" rel="stylesheet">
+   	<link href="css/bootstrap-social.css" rel="stylesheet" />
+    <link href="css/photoswipe.css" rel="stylesheet">
+    <link href="css/photoswipe/default-skin.css" rel="stylesheet">
+    <!-- endbuild -->
+	
+
+  <style>	
+	.img-thumbnail{
+		height:200px;
+		width:100%;
+		background-color:rgba(112,45,163,1.00);
+		padding:10px;
+		}
+  </style>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <h1>SRC</h1>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="#">EVENT</a></li>
+		<li><a href="projects.html">PROJECTS</a></li>
+		<li><a href="contact_us.html">CONTACT US</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">GALARY <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="SRC_Core_Committee.html">Core Committee</a></li>
+            <li><a href="galary.html">SRC Galary</a></li>
+          </ul>
+        </li>
+      </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+	<!-- Section: intro -->
+    <section id="intro" class="intro">
+	
+		<div class="slogan">
+			<h2>SGSITS Robotics Club</h2>
+		</div>
+	</section>
+    <section id="galary" class="home-section text-center">
+		<div class="heading-about">
+			<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="wow bounceInDown" data-wow-delay="0.4s">
+					<div class="section-heading">
+					<h2>Galary</h2>
+                    <i class="fa fa-2x fa-angle-down"></i>
+					</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+     	<div class="container">
+        <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+ 
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="col-xs-12 col-sm-6 col-md-3">
+      <a href="images/13582-05.jpg" itemprop="contentUrl" data-size="964x1024">
+          <img src="images/13582-05.jpg" itemprop="thumbnail" alt="Image description" class="img-thumbnail"/>
+      </a>
+    </figure>
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="col-xs-12 col-sm-6 col-md-3">
+      <a href="images/arm.jpg" itemprop="contentUrl" data-size="1024x683">
+          <img src="images/arm.jpg" itemprop="thumbnail" alt="Image description" class="img-thumbnail" />
+      </a>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="col-xs-12 col-sm-6 col-md-3">
+      <a href="images/girl1.jpg" itemprop="contentUrl" data-size="1024x768">
+          <img src="images/girl1.jpg" itemprop="thumbnail" alt="Image description" class="img-thumbnail"/>
+      </a>
+    </figure>
+
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="col-xs-12 col-sm-6 col-md-3">
+      <a href="images/men1.png" itemprop="contentUrl" data-size="1024x768">
+          <img src="images/men1.png" itemprop="thumbnail" alt="Image description" class="img-thumbnail"/>
+      </a>
+    </figure>
+  </div>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+</div>
+        
+        
+        </div>
+       </section>
+       
+    <footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-12">
+					<div class="wow shake" data-wow-delay="0.4s">
+					<div class="page-scroll marginbot-30">
+						<a href="#intro" id="totop" class="btn btn-circle">
+							<i class="fa fa-angle-double-up animated"></i>
+						</a>
+					</div>
+					</div>
+                    <a class="btn btn-social-icon btn-twitter wow bounce" data-wow-delay="0.2s"><span class="fa fa-twitter"></span></a>
+                    <a class="btn btn-social-icon btn-google wow bounce" data-wow-delay="0.5s"><span class="fa fa-google-plus"></span></a>
+                    <a class="btn btn-social-icon btn-facebook wow bounce" data-wow-delay="0.8s"><span class="fa fa-facebook"></span></a>
+                    <a class="btn btn-social-icon btn-instagram wow bounce" data-wow-delay="1s"><span class="fa fa-instagram"></span></a>
+                    <p><span class="fa fa-copyright"></span>Copyright  - MenduPower. All rights reserved.</p>
+				</div>
+			</div>	
+		</div>
+	</footer>
+    <!-- build:js scripts/main.js -->
+    <script src="js/photoswipe.min.js"></script>
+    <script src="js/photoswipe-ui-default.min.js"></script>
+    <script src="js/photoswipe-init.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/wow.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!--endbuild-->
+</body>
+</html>

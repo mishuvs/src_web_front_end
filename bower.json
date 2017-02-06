@@ -1,0 +1,24 @@
+{
+  "name": "src",
+  "authors": [
+    "vaibhav"
+  ],
+  "description": "Website for sgsits robotics club",
+  "main": "app/index.html",
+  "keywords": [
+    "src",
+    "sgsits",
+    "robotics",
+    "website"
+  ],
+  "license": "MIT",
+  "homepage": "app/index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

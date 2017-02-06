@@ -1,0 +1,69 @@
+Programing Structure of web app
+
+events ->
+
+	a> database Model->
+		1> name
+		2> details
+		3> date, time interval(from, to)
+		4> targeted people
+		5> photos(cover, other)
+		6> views
+		7> status(upcomming, ongoing, already done)
+		8> last modified by(ref src_member)
+		9> list of users participating(ref user)
+
+	b> actions ->
+		1> create
+		2> delete
+		3> edit
+		4> share(everyone)
+
+projects ->
+
+	a> database Model->
+		1> name
+		2> group members(ref src_member)
+		3> status(done, pending)
+		4> details
+		5> documentation
+		6> video
+		7> last modified by(ref src_member)
+
+	b> actions ->
+		1> create
+		2> delete
+		3> edit
+		4> share(everyone)
+
+user ->
+	
+	a> database Model->
+		1> name
+		2> email
+		3> Mobile No
+		4> authentication type(fb, g+, local) --boolean
+		5> facebook(id, token)
+		6> google+(id, token)
+		7> local(password)
+		8> participating in events(ref event)
+		9> college
+
+	b> actions ->
+		1> participate in events
+		2> change password
+		3> update profile
+
+src member ->
+	
+	a> database Model->(same as user)
+
+	b> actions ->
+		1> can update info about thier project
+		2> can update respective data assigned to them(like cmo can update components details)
+		3> can update info about components they have
+		4> can update event infos and others
+		5> can send mail to all src members/others in one click
+		6> change password
+		7> update profile
+		8> can view number of users registered for perticular event
