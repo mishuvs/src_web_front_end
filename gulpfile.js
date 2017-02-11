@@ -30,7 +30,13 @@ gulp.task('clean', function() {
 
 // Default task
 gulp.task('default', ['clean'], function() {
-    gulp.start('usemin', 'imagemin','copyfonts');
+    gulp.start('usemin', 'imagemin','copyfonts','copyviews');
+});
+
+gulp.task('copyviews',['clean'], function(){
+    //views html filess
+      return gulp.src('./app/views/*.html')
+      .pipe(gulp.dest('dist/views/'));
 });
 
 gulp.task('usemin',['jshint'], function () {
