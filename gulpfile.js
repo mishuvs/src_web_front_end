@@ -30,13 +30,18 @@ gulp.task('clean', function() {
 
 // Default task
 gulp.task('default', ['clean'], function() {
-    gulp.start('usemin', 'imagemin','copyfonts','copyviews');
+    gulp.start('usemin', 'imagemin','copyfonts','copyviews','copystyles');
 });
 
 gulp.task('copyviews',['clean'], function(){
     //views html filess
       return gulp.src('./app/views/*.html')
       .pipe(gulp.dest('dist/views/'));
+});
+
+gulp.task('copystyles',function(){
+    return gulp.src('./app/css/**/*.css')
+    .pipe(gulp.dest('dist/styles/'));
 });
 
 gulp.task('usemin',['jshint'], function () {

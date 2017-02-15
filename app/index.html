@@ -6,31 +6,34 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<title>SRC</title>
+        <!-- FONTAWESOME cdn -->
         <script src="https://use.fontawesome.com/24df17425d.js"></script>
-		<!-- build:css styles/main.css -->
-		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-		<link href="css/animate.css" rel="stylesheet" />
-        <link href="css/style2.css" rel="stylesheet">
-		<link href="css/bootstrap-social.css" rel="stylesheet" />
-		<link href="css/style.css" rel="stylesheet">
-        <link href="css/photoswipe/default-skin.css">
-		<!-- endbuild -->
+        <link href="css/font-awesome.min.css">
+        <!-- BOOTSTRAP cdns -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- bootstrap ends -->
 	</head>
-	<body id="page-top" data-target=".navbar-custom">
+	<body id="page-top" data-target=".navbar-custom" ui-router-styles>
         <div ui-view="header"></div>
 		<div ui-view="content"></div>
 		<div ui-view="footer"></div>
 		<div class="cover"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script><!-- angular -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script><!-- UIROUTER -->
 		<!-- build:js scripts/main.js -->
-		<script src="js/angular.min.js"></script>
-        <script src="js/angular-ui-router.min.js"></script>
+        <script src="../bower_components/angular-ui-router-styles/ui-router-styles.js"></script>
         <script src="js/app.js"></script>
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
 		<script src="js/wow.min.js"></script>
 		<script src="js/custom.js"></script>
 		<script src="js/typed.js"></script>
-		<!-- endbuild -->
+        <!-- endbuild -->
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMyYdO2nbfHt_QesNL8s2btwKvChDCwlc&callback=initMap"></script>		
 	</body>
 </html>
