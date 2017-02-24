@@ -2,3 +2,5 @@ node_modules
 bower_components
 .brackets.json
 notes.txt
+dist
+json-server/public

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('src', ['ui.router', 'uiRouterStyles'])
+angular.module('src', ['ui.router', 'uiRouterStyles', 'ngResource'])
 .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
         
@@ -28,7 +28,8 @@ angular.module('src', ['ui.router', 'uiRouterStyles'])
                 url:'projects',
                 views: {
                     'content@': {
-                        templateUrl : 'views/projects.html'    
+                        templateUrl : 'views/projects.html',
+                        controller : 'projectController'
                     }
                 },
             data: {

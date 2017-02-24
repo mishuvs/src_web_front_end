@@ -1,0 +1,24 @@
+{
+    "projects": [
+        {
+            "id" : 0,
+            "name" : "Room Automation",
+            "image" : "images/roomautomation.jpg"
+        },
+        {
+            "id" : 1,
+            "name" : "Face Recognition",
+            "image" : "images/facerecognition.jpg"
+        },
+        {
+            "id" : 2,
+            "name" : "unknown",
+            "image" : "images/table.jpg"
+        },
+        {
+            "id" : 3,
+            "name" : "stopwatch",
+            "image" : "images/stopwatch.jpg"
+        }
+    ]
+}

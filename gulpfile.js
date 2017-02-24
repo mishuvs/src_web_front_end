@@ -25,7 +25,7 @@ var ngannotate = require('gulp-ng-annotate');
 
 // Clean
 gulp.task('clean', function() {
-    return del(['dist']);
+    return del(['json-server/public']);
 });
 
 // Default task
@@ -36,12 +36,12 @@ gulp.task('default', ['clean'], function() {
 gulp.task('copyviews',['clean'], function(){
     //views html filess
       return gulp.src('./app/views/*.html')
-      .pipe(gulp.dest('dist/views/'));
+      .pipe(gulp.dest('json-server/public/views/'));
 });
 
 gulp.task('copystyles',function(){
     return gulp.src('./app/css/**/*.css')
-    .pipe(gulp.dest('dist/styles/'));
+    .pipe(gulp.dest('json-server/public/styles/'));
 });
 
 gulp.task('usemin',['jshint'], function () {
@@ -50,22 +50,22 @@ gulp.task('usemin',['jshint'], function () {
         css:[minifycss(),rev()],
         js: [uglify(),rev()]
       }))
-      .pipe(gulp.dest('dist/'));
+      .pipe(gulp.dest('json-server/public/'));
 });
 
 // Images
 gulp.task('imagemin', function() {
-  return del(['dist/images']), gulp.src('app/images/**/*')
+  return del(['json-server/public/images']), gulp.src('app/images/**/*')
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('json-server/public/images'))
     .pipe(notify({ message: 'Images task complete' }));
 });
 
 gulp.task('copyfonts', ['clean'], function() {
    gulp.src('./bower_components/font-awesome/fonts/**/*.{ttf,woff,eof,svg}*')
-   .pipe(gulp.dest('./dist/fonts'));
-   gulp.src('./bower_components/bootstrap/dist/fonts/**/*.{ttf,woff,eof,svg}*')
-   .pipe(gulp.dest('./dist/fonts'));
+   .pipe(gulp.dest('./json-server/public/fonts'));
+   gulp.src('./bower_components/bootstrap/json-server/public/fonts/**/*.{ttf,woff,eof,svg}*')
+   .pipe(gulp.dest('./json-server/public/fonts'));
 });
 
 // Watch
@@ -83,17 +83,18 @@ gulp.task('browser-sync', ['default'], function () {
       'app/styles/**/*.css',
       'app/images/**/*.png',
       'app/js/**/*.js',
-      'dist/**/*'
+      'json-server/public/**/*'
    ];
 
    browserSync.init(files, {
       server: {
-         baseDir: "dist",
+         baseDir: "json-server/public",
          index: "index.html"
-      }
+      },
+       port: 3001
    });
-        // Watch any files in dist/, reload on change
-  gulp.watch(['dist/**']).on('change', browserSync.reload);
+        // Watch any files in json-server/public/, reload on change
+  gulp.watch(['json-server/public/**']).on('change', browserSync.reload);
     });
 
 gulp.task('usemin',['jshint'], function () {
@@ -104,7 +105,7 @@ gulp.task('usemin',['jshint'], function () {
       js: [ngannotate(),uglify(),rev()]
     }))
     
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('json-server/public/'));
 });
 
 gulp.task('index',['jshint'], function () {
@@ -114,7 +115,7 @@ gulp.task('index',['jshint'], function () {
       js: [ngannotate(),uglify(),rev()]
     }))
     
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('json-server/public/'));
 });
 
 gulp.task('galary',['jshint'], function () {
@@ -124,7 +125,7 @@ gulp.task('galary',['jshint'], function () {
       js: [ngannotate(),uglify(),rev()]
     }))
     
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('json-server/public/'));
 });
 
 gulp.task('contactus',['jshint'], function () {
@@ -134,7 +135,7 @@ gulp.task('contactus',['jshint'], function () {
       js: [ngannotate(),uglify(),rev()]
     }))
     
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('json-server/public/'));
 });
 
 gulp.task('projects',['jshint'], function () {
@@ -144,7 +145,7 @@ gulp.task('projects',['jshint'], function () {
       js: [ngannotate(),uglify(),rev()]
     }))
     
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('json-server/public/'));
 });
 
 gulp.task('src',['jshint'], function () {
@@ -154,6 +155,6 @@ gulp.task('src',['jshint'], function () {
       js: [ngannotate(),uglify(),rev()]
     }))
     
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('json-server/public/'));
 });
 
