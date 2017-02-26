@@ -12,10 +12,12 @@ angular.module('src', ['ui.router', 'uiRouterStyles', 'ngResource'])
                         templateUrl : 'views/header.html',
                     },
                     'content': {
-                        templateUrl : 'views/aboutus.html'
+                        templateUrl : 'views/aboutus.html',
+                        controller: 'aboutController'
                     },
                     'footer': {
                         templateUrl : 'views/footer.html',
+                        controller: 'footerController'
                     }
                 },            
             data: {
