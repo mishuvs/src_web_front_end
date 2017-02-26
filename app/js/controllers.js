@@ -17,7 +17,7 @@ angular.module('src')
         }])
 
         .controller('aboutController', ['$scope','dataFactory','$document','$window', function($scope, dataFactory,$document,$window) {
-$document.ready(function() {
+        $document.ready(function() {
         
 			$(function(){
 			    $(".element").typed({
@@ -27,8 +27,8 @@ $document.ready(function() {
 			        typeSpeed: 1,
 			    });
 			});
-            
-        }])
+        })}
+                                       ])
 
         .controller('footerController', ['$scope','dataFactory', function($scope, dataFactory){
             
