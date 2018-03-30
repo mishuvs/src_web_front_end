@@ -569,6 +569,8 @@ footer p {
     }
 	
     .intro {
+        color:black;
+        background-color: black;
         height: 100%;
         padding: 0;
     }
